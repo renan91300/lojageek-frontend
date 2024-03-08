@@ -176,6 +176,18 @@ main div.register .steps-switcher > div.active span {
 
 
 /*  */
+main div.register form > .steps > .step {
+    margin: 32px 0;
+}
+
+main div.register form > .steps .fields .row > div {
+    margin: 12px 0;
+}
+
+main div.register form > .steps .fields .row > div.title {
+    margin-bottom: 0;
+}
+
 main div.register form > .buttons {
     display: flex;
     justify-content: flex-end;
