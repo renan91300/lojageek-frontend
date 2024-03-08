@@ -56,7 +56,7 @@ main div.sidebar {
 
 /*--  sidebar  --*/
 
-main .row > div.col-md-3 {
+main .row > div.col-lg-3 {
     position: sticky;
     top: 0;
     background: FFF;
@@ -65,7 +65,7 @@ main .row > div.col-md-3 {
     border-radius: 0 16px 16px 0;
 } 
 
-main .row > div.col-md-3 div.container,
+main .row > div.col-lg-3 div.container,
 main div.sidebar {
     height: 100%;
 }
@@ -117,6 +117,13 @@ main div.sidebar .user .info {
 
 main div.sidebar .user .info .email {
     font-size: 12px;
+}
+
+
+@media screen and (max-width:991px) {
+    main .row > div.col-lg-3 {
+        height: fit-content;
+    }
 }
 
 
