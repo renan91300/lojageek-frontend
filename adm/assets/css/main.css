@@ -35,6 +35,10 @@ h2 {
     font-size: 1.5em;
 }
 
+h3 {
+    font-size: 1.25em;
+}
+
 img {
     display: block;
     width: auto;
@@ -116,6 +120,7 @@ main div.sidebar .user .info .email {
 }
 
 
+
 /*--  register  --*/
 
 main div.register {
@@ -124,7 +129,6 @@ main div.register {
 
 
 /*  */
-
 main div.register .steps-switcher {
     display: flex;
     align-items: center;
@@ -161,7 +165,6 @@ main div.register .steps-switcher > div:nth-child(n+2)::after {
 
 
 /*  */
-
 main div.register .steps-switcher > div.active {
     background: #EA526F;
     color: #FFF;
@@ -169,4 +172,12 @@ main div.register .steps-switcher > div.active {
 
 main div.register .steps-switcher > div.active span {
     color: #FFF;
+}
+
+
+/*  */
+main div.register form > .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 12px;
 }
