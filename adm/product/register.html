@@ -16,269 +16,277 @@
 
     <main>
         <div class='row'>
-            <div class='col-3'>
-                <div class='logo'>
-                    <span>Far Far Away</span>
-                </div>
-
-                <div class='menu'>
-                    <ul>
-                        <li>Dashboard</li>
-
-                        <li><strong>Produtos</strong></li>
-
-                        <li>Pedidos</li>
-
-                        <li>Clientes</li>
-                    </ul>
-                </div>
-
-                <div class='user'>
-                    <div class='logo'></div>
-
-                    <div class='info'>
-                        <div class='username'>
-                            <span>Administrador</span>
+            <div class='col-md-3'>
+                <div class='container'>
+                    <div class='sidebar'>
+                        <div class='logo'>
+                            <span>Far Far Away</span>
                         </div>
-
-                        <div class='email'>
-                            <span>admin@admin.com</span>
+        
+                        <div class='menu'>
+                            <ul>
+                                <li>Dashboard</li>
+        
+                                <li><strong>Produtos</strong></li>
+        
+                                <li>Pedidos</li>
+        
+                                <li>Clientes</li>
+                            </ul>
+                        </div>
+        
+                        <div class='user'>
+                            <div class='logo'></div>
+        
+                            <div class='info'>
+                                <div class='username'>
+                                    <span>Administrador</span>
+                                </div>
+        
+                                <div class='email'>
+                                    <span>admin@admin.com</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class='col-9'>
+            <div class='col-md-9'>
                 <div class='container'>
-                    <div class='introduction'>
-                        <div class='title'>
-                            <h1>Novo Produto</h1>
-                        </div>
-    
-                        <div class='breadcrumb'>
-                            <span><strong>Produtos</strong> > Novo Produto</span>
-                        </div>
-                    </div>
-    
-                    <div class='register'>
-                        <div class='steps-switcher'>
-                            <div class='step'>
-                                <span>1</span>
+                    <div class='main'>
+                        <div class='introduction'>
+                            <div class='title'>
+                                <h1>Novo Produto</h1>
                             </div>
-    
-                            <div class='step'>
-                                <span>2</span>
-                            </div>
-    
-                            <div class='step'>
-                                <span>3</span>
-                            </div>
-    
-                            <div class='step'>
-                                <span>4</span>
+        
+                            <div class='breadcrumb'>
+                                <span><strong>Produtos</strong> > Novo Produto</span>
                             </div>
                         </div>
-
-                        <form action='#'>
-                            <div class='steps'>
-                                <div class='step step-1'>
-                                    <div class='title'>
-                                        <h2>Dados Básicos</h2>
-                                    </div>
-    
-                                    <div class='fields'>
-                                        <div class='row'>
-                                            <div class='col-lg-6'>
-                                                <label for='productName' class='form-label'>Nome do Produto</label>
-    
-                                                <input type='text' class='form-control' id='productName' placeholder='' value=''>
-                                            </div>
-    
-                                            <div class='col-lg-6'>
-                                                <label for='productCode' class='form-label'>Código (SKU)</label>
-    
-                                                <input type='text' class='form-control' id='productCode' placeholder='' value=''>
-                                            </div>
-                                        </div>
-    
-                                        <div class='row'>
-                                            <div class='col-lg-4'>
-                                                <label for='productPrice' class='form-label'>Preço Venda</label>
-    
-                                                <input type='number' class='form-control' id='productPrice' placeholder='' value=''>
-                                            </div>
-    
-                                            <div class='col-lg-4'>
-                                                <label for='productUnit' class='form-label'>Unidade (Un, Pç, Kg)</label>
-    
-                                                <input type='text' class='form-control' id='productUnit' placeholder='' value=''>
-                                            </div>
-    
-                                            <div class='col-lg-4'>
-                                                <label for='productCategory' class='form-label'>Categoria</label>
-                                                
-                                                <select class='form-select' id='productCategory'>
-                                                    <option selected>Sem Categoria</option>
-                                                    <option value='1'>Categoria 1</option>
-                                                    <option value='2'>Categoria 2</option>
-                                                    <option value='3'>Categoria 3</option>
-                                                  </select>
-                                            </div>
-                                        </div>
-                                    </div>
+        
+                        <div class='register'>
+                            <div class='steps-switcher'>
+                                <div class='step active'>
+                                    <span>1</span>
                                 </div>
+        
+                                <div class='step'>
+                                    <span>2</span>
+                                </div>
+        
+                                <div class='step'>
+                                    <span>3</span>
+                                </div>
+        
+                                <div class='step'>
+                                    <span>4</span>
+                                </div>
+                            </div>
     
-                                <div class='step step-2'>
-                                    <div class='title'>
-                                        <h2>Características</h2>
-                                    </div>
-    
-                                    <div class='fields'>
-                                        <div class='row'>
-                                            <div class='col-lg-3'>
-                                                <label for='productWeight' class='form-label'>Peso</label>
-    
-                                                <input type='number' class='form-control' id='productWeight' placeholder='' value=''>
-                                            </div>
-    
-                                            <div class='col-lg-3'>
-                                                <label for='productWidth' class='form-label'>Largura</label>
-    
-                                                <input type='number' class='form-control' id='productWidth' placeholder='' value=''>
-                                            </div>
-    
-                                            <div class='col-lg-3'>
-                                                <label for='productHeight' class='form-label'>Altura</label>
-    
-                                                <input type='number' class='form-control' id='productHeight' placeholder='' value=''>
-                                            </div>
-    
-                                            <div class='col-lg-3'>
-                                                <label for='productItemsPerBox' class='form-label'>Items p/caixa</label>
-    
-                                                <input type='number' class='form-control' id='productItemsPerBox' placeholder='' value=''>
-                                            </div>
+                            <form action='#'>
+                                <div class='steps'>
+                                    <div class='step step-1'>
+                                        <div class='title'>
+                                            <h2>Dados Básicos</h2>
                                         </div>
-    
-                                        <div class='row'>
-                                            <div class='col-lg-4'>
-                                                <label for='productEAN' class='form-label'>GTIN/EAN</label>
-    
-                                                <input type='text' class='form-control' id='productEAN' placeholder='' value=''>
-                                            </div>
-    
-                                            <div class='col-lg-4'>
-                                                <label for='productMeasuring' class='form-label'>Unidade de Medida</label>
-                                                
-                                                <select class='form-select' id='productMeasuring'>
-                                                    <option value='1'>Centímetros</option>
-                                                    <option value='2'>Milímetros</option>
-                                                    <option value='3'>Metros</option>
-                                                  </select>
-                                            </div>
-    
-                                            <div class='col-lg-4 form-switch'>
-                                                <label class='form-label' for='productPromotion'>Promoção</label>
-    
-                                                <div class='d-flex'>
-                                                    <input class='form-check-input d-block ms-1' type='checkbox' id='productPromotion' checked>
-    
-                                                    <input type='number' class='form-control ms-2' id='productPromotionValue' placeholder='' value=''>
+        
+                                        <div class='fields'>
+                                            <div class='row'>
+                                                <div class='col-lg-6'>
+                                                    <label for='productName' class='form-label'>Nome do Produto</label>
+        
+                                                    <input type='text' class='form-control' id='productName' placeholder='' value=''>
+                                                </div>
+        
+                                                <div class='col-lg-6'>
+                                                    <label for='productCode' class='form-label'>Código (SKU)</label>
+        
+                                                    <input type='text' class='form-control' id='productCode' placeholder='' value=''>
+                                                </div>
+
+                                                <div class='col-lg-6'>
+                                                    <label for='productPrice' class='form-label'>Preço Venda</label>
+        
+                                                    <input type='number' class='form-control' id='productPrice' placeholder='' value=''>
+                                                </div>
+        
+                                                <div class='col-lg-6'>
+                                                    <label for='productUnit' class='form-label'>Unidade (Un, Pç, Kg)</label>
+        
+                                                    <input type='text' class='form-control' id='productUnit' placeholder='' value=''>
+                                                </div>
+        
+                                                <div class='col-lg-6'>
+                                                    <label for='productCategory' class='form-label'>Categoria</label>
+                                                    
+                                                    <select class='form-select' id='productCategory'>
+                                                        <option selected>Sem Categoria</option>
+                                                        <option value='1'>Categoria 1</option>
+                                                        <option value='2'>Categoria 2</option>
+                                                        <option value='3'>Categoria 3</option>
+                                                      </select>
                                                 </div>
                                             </div>
-                                            
-                                            <div class='col-lg-12'>
-                                                <label for='productDescription' class='form-label'>Descrição</label>
-    
-                                                <textarea class='form-control' id='productDescription' rows='5'></textarea>
-                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-    
-                                <div class='step step-3'>
-                                    <div class='title'>
-                                        <h2>Imagens</h2>
-                                    </div>
-    
-                                    <div class='fields'>
-                                        <div class='mb-3'>
-                                            <label for='formFileMultiple' class='form-label'>Adicione as imagens do produto</label>
-    
-                                            <input class='form-control' type='file' id='formFileMultiple' multiple>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class='step step-4'>
-                                    <div class='title'>
-                                        <h2>Estoque e Variações</h2>
                                     </div>
         
-                                    <div class='fields'>
-                                        <div class='row'>
-                                            <div class='col-12 title'>
-                                                <h3>Estoque</h3>
-                                            </div>
-    
-                                            <div class='col-12'>
-                                                <label for='productStock' class='form-label'>GTIN/EAN</label>
-    
-                                                <input type='text' class='form-control' id='productStock' placeholder='' value=''>
+                                    <div class='step step-2'>
+                                        <div class='title'>
+                                            <h2>Características</h2>
+                                        </div>
+        
+                                        <div class='fields'>
+                                            <div class='row'>
+                                                <div class='col-lg-6'>
+                                                    <label for='productWeight' class='form-label'>Peso</label>
+        
+                                                    <input type='number' class='form-control' id='productWeight' placeholder='' value=''>
+                                                </div>
+        
+                                                <div class='col-lg-6'>
+                                                    <label for='productWidth' class='form-label'>Largura</label>
+        
+                                                    <input type='number' class='form-control' id='productWidth' placeholder='' value=''>
+                                                </div>
+        
+                                                <div class='col-lg-6'>
+                                                    <label for='productHeight' class='form-label'>Altura</label>
+        
+                                                    <input type='number' class='form-control' id='productHeight' placeholder='' value=''>
+                                                </div>
+        
+                                                <div class='col-lg-6'>
+                                                    <label for='productItemsPerBox' class='form-label'>Items p/caixa</label>
+        
+                                                    <input type='number' class='form-control' id='productItemsPerBox' placeholder='' value=''>
+                                                </div>
+
+                                                <div class='col-lg-6'>
+                                                    <label for='productEAN' class='form-label'>GTIN/EAN</label>
+        
+                                                    <input type='text' class='form-control' id='productEAN' placeholder='' value=''>
+                                                </div>
+        
+                                                <div class='col-lg-6'>
+                                                    <label for='productMeasuring' class='form-label'>Unidade de Medida</label>
+                                                    
+                                                    <select class='form-select' id='productMeasuring'>
+                                                        <option value='1'>Centímetros</option>
+                                                        <option value='2'>Milímetros</option>
+                                                        <option value='3'>Metros</option>
+                                                      </select>
+                                                </div>
+        
+                                                <div class='col-lg-6 form-switch'>
+                                                    <label class='form-label' for='productPromotion'>Promoção</label>
+        
+                                                    <div class='d-flex'>
+                                                        <input class='form-check-input d-block ms-1' type='checkbox' id='productPromotion' checked>
+        
+                                                        <input type='number' class='form-control ms-2' id='productPromotionValue' placeholder='' value=''>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class='col-lg-12'>
+                                                    <label for='productDescription' class='form-label'>Descrição</label>
+        
+                                                    <textarea class='form-control' id='productDescription' rows='5'></textarea>
+                                                </div>
                                             </div>
                                         </div>
-    
-                                        <div class='row'>
-                                            <div class='col-12 title'>
-                                                <h3>Variações</h3>
+                                    </div>
+        
+                                    <div class='step step-3'>
+                                        <div class='title'>
+                                            <h2>Imagens</h2>
+                                        </div>
+        
+                                        <div class='fields'>
+                                            <div class='row'>
+                                                <div class='col-lg-12'>
+                                                    <label for='formFileMultiple' class='form-label'>Adicione as imagens do produto</label>
+            
+                                                    <input class='form-control' type='file' id='formFileMultiple' multiple>
+                                                </div>
                                             </div>
-    
-                                            <div class='col-lg-4'>
-                                                <label for='productAttribute1' class='form-label'>Nome do atributo</label>
-                                                
-                                                <select class='form-select' id='productAttribute1'>
-                                                    <option selected>Selecionar atributo</option>
-                                                    <option value='1'>Cor</option>
-                                                    <option value='2'>Tamanho</option>
-                                                    <option value='3'>Coleção</option>
-                                                  </select>
+                                        </div>
+                                    </div>
+        
+                                    <div class='step step-4'>
+                                        <div class='title'>
+                                            <h2>Estoque e Variações</h2>
+                                        </div>
+            
+                                        <div class='fields'>
+                                            <div class='row'>
+                                                <div class='title'>
+                                                    <h3>Estoque</h3>
+                                                </div>
+
+                                                <div class='col-12'>
+                                                    <label for='productStock' class='form-label'>Quantidade em Estoque</label>
+        
+                                                    <input type='number' class='form-control' id='productStock' placeholder='' value=''>
+                                                </div>
                                             </div>
-    
-                                            <div class='col-lg-4'>
-                                                <label for='multiSelect' class='form-label'>Opções</label>
-    
-                                                <select class='form-select'>
-                                                    <option selected>Selecionar opções</option>
-                                                    <option value='1'>Rosa</option>
-                                                    <option value='2'>Roxo</option>
-                                                    <option value='3'>Azul</option>
-                                                </select>
-                                            </div>
-    
-                                            <div class='col-lg-4'>
-                                                <label for='' class='form-label' style='min-height: 24px;display: block;'> </label>
-    
-                                                <button type='button' class='btn btn-outline-primary'>Adicionar Variação</button>
-                                            </div>
-                                        </div> 
+        
+                                            <div class='row'>
+                                                <div class='title'>
+                                                    <h3>Variações</h3>
+                                                </div>
+        
+                                                <div class='col-lg-4'>
+                                                    <label for='productAttribute1' class='form-label'>Nome do atributo</label>
+                                                    
+                                                    <select class='form-select' id='productAttribute1'>
+                                                        <option selected>Selecionar atributo</option>
+                                                        <option value='1'>Cor</option>
+                                                        <option value='2'>Tamanho</option>
+                                                        <option value='3'>Coleção</option>
+                                                      </select>
+                                                </div>
+        
+                                                <div class='col-lg-4'>
+                                                    <label for='multiSelect' class='form-label'>Opções</label>
+        
+                                                    <select class='form-select'>
+                                                        <option selected>Selecionar opções</option>
+                                                        <option value='1'>Rosa</option>
+                                                        <option value='2'>Roxo</option>
+                                                        <option value='3'>Azul</option>
+                                                    </select>
+                                                </div>
+        
+                                                <div class='col-lg-4'>
+                                                    <label for='' class='form-label' style='min-height: 24px;display: block;'> </label>
+        
+                                                    <button type='button' class='btn btn-outline-primary'>Adicionar Variação</button>
+                                                </div>
+                                            </div> 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+    
+                                <div class='buttons'>
+                                    <div class='previous'>
+                                        <button type='button' class='btn btn-outline-danger'>Cancelar</button>
+                                    </div>
 
-                            <div class='buttons'>
-                                <div class='previous'>
-                                    <button type='button' class='btn btn-outline-primary'>Voltar</button>
+                                    <div class='previous'>
+                                        <button type='button' class='btn btn-outline-primary'>Voltar</button>
+                                    </div>
+    
+                                    <div class='next'>
+                                        <button type='button' class='btn btn-primary'>Avançar</button>
+                                    </div>
+    
+                                    <div class='submit'>
+                                        <button type='button' class='btn btn-success'>Salvar</button>
+                                    </div>
                                 </div>
-
-                                <div class='next'>
-                                    <button type='button' class='btn btn-primary'>Avançar</button>
-                                </div>
-
-                                <div class='submit'>
-                                    <button type='button' class='btn btn-success'>Salvar</button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
