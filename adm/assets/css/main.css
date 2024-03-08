@@ -89,6 +89,20 @@ main div.sidebar .menu {
     margin: 32px 0;
 }
 
+main div.sidebar .menu li {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+}
+
+main div.sidebar .menu li:nth-child(n+2) {
+    margin-top: 24px;
+}
+
+main div.sidebar .menu li span {
+    font-size: 14px;
+}
+
 
 /*  */
 main div.sidebar .user {
