@@ -1,11 +1,211 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Cadastro de Produto</title>
+
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
 </head>
+
 <body>
+    <header></header>
+
+    <main>
+        <div class='row'>
+            <div class='col-3'>
+                <div class='logo'>
+                    <span>Far Far Away</span>
+                </div>
+
+                <div class='menu'>
+                    <ul>
+                        <li>Dashboard</li>
+
+                        <li><strong>Produtos</strong></li>
+
+                        <li>Pedidos</li>
+
+                        <li>Clientes</li>
+                    </ul>
+                </div>
+
+                <div class='user'>
+                    <div class='logo'></div>
+
+                    <div class='info'>
+                        <div class='username'>
+                            <span>Administrador</span>
+                        </div>
+
+                        <div class='email'>
+                            <span>admin@admin.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col-9'>
+                <div class='container'>
+                    <div class='introduction'>
+                        <div class='title'>
+                            <h1>Novo Produto</h1>
+                        </div>
     
+                        <div class='breadcrumb'>
+                            <span><strong>Produtos</strong> > Novo Produto</span>
+                        </div>
+                    </div>
+    
+                    <div class='register'>
+                        <div class='steps-switcher'>
+                            <div class='step'>
+                                <span>1</span>
+                            </div>
+    
+                            <div class='step'>
+                                <span>2</span>
+                            </div>
+    
+                            <div class='step'>
+                                <span>3</span>
+                            </div>
+    
+                            <div class='step'>
+                                <span>4</span>
+                            </div>
+                        </div>
+    
+                        <div class='steps'>
+                            <div class='step step-1'>
+                                <div class='title'>
+                                    <h2>Dados Básicos</h2>
+                                </div>
+    
+                                <div class='fields'>
+                                    <form>
+                                        <div class='row'>
+                                            <div class='col-lg-6'>
+                                                <label for='productName' class='form-label'>Nome do Produto</label>
+    
+                                                <input type='text' class='form-control' id='productName' placeholder='' value=''>
+                                            </div>
+    
+                                            <div class='col-lg-6'>
+                                                <label for='productCode' class='form-label'>Código (SKU)</label>
+    
+                                                <input type='text' class='form-control' id='productCode' placeholder='' value=''>
+                                            </div>
+                                        </div>
+
+                                        <div class='row'>
+                                            <div class='col-lg-4'>
+                                                <label for='productPrice' class='form-label'>Preço Venda</label>
+    
+                                                <input type='number' class='form-control' id='productPrice' placeholder='' value=''>
+                                            </div>
+    
+                                            <div class='col-lg-4'>
+                                                <label for='productUnit' class='form-label'>Unidade (Un, Pç, Kg)</label>
+    
+                                                <input type='text' class='form-control' id='productUnit' placeholder='' value=''>
+                                            </div>
+
+                                            <div class='col-lg-4'>
+                                                <label for='productCategory' class='form-label'>Categoria</label>
+                                                
+                                                <select class='form-select' id='productCategory'>
+                                                    <option selected>Sem Categoria</option>
+                                                    <option value='1'>Categoria 1</option>
+                                                    <option value='2'>Categoria 2</option>
+                                                    <option value='3'>Categoria 3</option>
+                                                  </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class='step step-2'>
+                                <div class='title'>
+                                    <h2>Características</h2>
+                                </div>
+    
+                                <div class='fields'>
+                                    <form>
+                                        <div class='row'>
+                                            <div class='col-lg-3'>
+                                                <label for='productWeight' class='form-label'>Peso</label>
+    
+                                                <input type='number' class='form-control' id='productWeight' placeholder='' value=''>
+                                            </div>
+
+                                            <div class='col-lg-3'>
+                                                <label for='productWidth' class='form-label'>Largura</label>
+    
+                                                <input type='number' class='form-control' id='productWidth' placeholder='' value=''>
+                                            </div>
+
+                                            <div class='col-lg-3'>
+                                                <label for='productHeight' class='form-label'>Altura</label>
+    
+                                                <input type='number' class='form-control' id='productHeight' placeholder='' value=''>
+                                            </div>
+
+                                            <div class='col-lg-3'>
+                                                <label for='productItemsPerBox' class='form-label'>Items p/caixa</label>
+    
+                                                <input type='number' class='form-control' id='productItemsPerBox' placeholder='' value=''>
+                                            </div>
+                                        </div>
+
+                                        <div class='row'>
+                                            <div class='col-lg-4'>
+                                                <label for='productEAN' class='form-label'>GTIN/EAN</label>
+    
+                                                <input type='text' class='form-control' id='productEAN' placeholder='' value=''>
+                                            </div>
+    
+                                            <div class='col-lg-4'>
+                                                <label for='productMeasuring' class='form-label'>Unidade de Medida</label>
+                                                
+                                                <select class='form-select' id='productMeasuring'>
+                                                    <option value='1'>Centímetros</option>
+                                                    <option value='2'>Milímetros</option>
+                                                    <option value='3'>Metros</option>
+                                                  </select>
+                                            </div>
+
+                                            <div class='col-lg-4 form-switch'>
+                                                <label class='form-label' for='productPromotion'>Promoção</label>
+
+                                                <div class='d-flex'>
+                                                    <input class='form-check-input d-block ms-1' type='checkbox' id='productPromotion' checked>
+
+                                                    <input type='number' class='form-control ms-2' id='productPromotionValue' placeholder='' value=''>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class='col-lg-12'>
+                                                <label for='productDescription' class='form-label'>Descrição</label>
+
+                                                <textarea class='form-control' id='productDescription' rows='5'></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous'></script>
 </body>
+
 </html>
