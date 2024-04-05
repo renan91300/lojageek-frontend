@@ -30,11 +30,11 @@
                             <ul>
                                 <li><span class="fluent-mdl2--b-i-dashboard"></span> Dashboard</li>
         
-                                <li><a href='./index.html'><span class="fluent-mdl2--product-list"></span> <strong>Produtos</strong></a></li>
+                                <li><span class="fluent-mdl2--product-list"></span> <strong>Produtos</strong></li>
         
                                 <li><span class="lets-icons--order"></span> Pedidos</li>
         
-                                <li><a href='../client/index.html'><span class="fa6-solid--user-group"></span> Clientes</a></li>
+                                <li><span class="fa6-solid--user-group"></span> Clientes</li>
                             </ul>
                         </div>
         
@@ -87,7 +87,7 @@
                                 </div>
                             </div>
     
-                            <form action='#'>
+                            <form id="form-product">
                                 <div class='steps'>
                                     <div class='step step-1'>
                                         <div class='title'>
@@ -148,23 +148,23 @@
                                                 </div>
         
                                                 <div class='col-lg-6'>
-                                                    <label for='productHeight' class='form-label'>Altura</label>
-        
-                                                    <input type='number' class='form-control' id='productHeight' placeholder='' value=''>
-                                                </div>
-
-                                                <div class='col-lg-6'>
                                                     <label for='productWidth' class='form-label'>Largura</label>
         
                                                     <input type='number' class='form-control' id='productWidth' placeholder='' value=''>
                                                 </div>
-
+        
                                                 <div class='col-lg-6'>
-                                                    <label for='productLenght' class='form-label'>Comprimento</label>
+                                                    <label for='productHeight' class='form-label'>Altura</label>
         
-                                                    <input type='number' class='form-control' id='productLenght' placeholder='' value=''>
+                                                    <input type='number' class='form-control' id='productHeight' placeholder='' value=''>
                                                 </div>
-        
+                                                
+                                                <div class='col-lg-6'>
+                                                    <label for='productLength' class='form-label'>Comprimento</label>
+                                                    <input type='number' class='form-control' id='productLength' placeholder='' value=''>
+                                                    
+                                                </div>
+
                                                 <div class='col-lg-6'>
                                                     <label for='productItemsPerBox' class='form-label'>Items p/caixa</label>
         
@@ -176,7 +176,8 @@
         
                                                     <input type='text' class='form-control' id='productEAN' placeholder='' value=''>
                                                 </div>
-                                                
+        
+        
                                                 <div class='col-lg-6 form-switch'>
                                                     <label class='form-label' for='productPromotion'>Promoção</label>
         
@@ -294,8 +295,9 @@
 
     <footer></footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../assets/js/product.js"></script>
 </body>
 
 </html>
