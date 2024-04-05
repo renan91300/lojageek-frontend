@@ -30,11 +30,11 @@
                             <ul>
                                 <li><span class="fluent-mdl2--b-i-dashboard"></span> Dashboard</li>
         
-                                <li><span class="fluent-mdl2--product-list"></span> <strong>Produtos</strong></li>
+                                <li><a href='./index.html'><span class="fluent-mdl2--product-list"></span> <strong>Produtos</strong></a></li>
         
                                 <li><span class="lets-icons--order"></span> Pedidos</li>
         
-                                <li><span class="fa6-solid--user-group"></span> Clientes</li>
+                                <li><a href='../client/index.html'><span class="fa6-solid--user-group"></span> Clientes</a></li>
                             </ul>
                         </div>
         
@@ -148,15 +148,21 @@
                                                 </div>
         
                                                 <div class='col-lg-6'>
+                                                    <label for='productHeight' class='form-label'>Altura</label>
+        
+                                                    <input type='number' class='form-control' id='productHeight' placeholder='' value=''>
+                                                </div>
+
+                                                <div class='col-lg-6'>
                                                     <label for='productWidth' class='form-label'>Largura</label>
         
                                                     <input type='number' class='form-control' id='productWidth' placeholder='' value=''>
                                                 </div>
-        
+
                                                 <div class='col-lg-6'>
-                                                    <label for='productHeight' class='form-label'>Altura</label>
+                                                    <label for='productLenght' class='form-label'>Comprimento</label>
         
-                                                    <input type='number' class='form-control' id='productHeight' placeholder='' value=''>
+                                                    <input type='number' class='form-control' id='productLenght' placeholder='' value=''>
                                                 </div>
         
                                                 <div class='col-lg-6'>
@@ -170,17 +176,7 @@
         
                                                     <input type='text' class='form-control' id='productEAN' placeholder='' value=''>
                                                 </div>
-        
-                                                <div class='col-lg-6'>
-                                                    <label for='productMeasuring' class='form-label'>Unidade de Medida</label>
-                                                    
-                                                    <select class='form-select' id='productMeasuring'>
-                                                        <option value='1'>Centímetros</option>
-                                                        <option value='2'>Milímetros</option>
-                                                        <option value='3'>Metros</option>
-                                                      </select>
-                                                </div>
-        
+                                                
                                                 <div class='col-lg-6 form-switch'>
                                                     <label class='form-label' for='productPromotion'>Promoção</label>
         
@@ -285,7 +281,7 @@
                                     </div>
     
                                     <div class='submit'>
-                                        <button type='button' class='btn btn-success'>Salvar</button>
+                                        <button type='submit' class='btn btn-success'>Salvar</button>
                                     </div>
                                 </div>
                             </form>
@@ -298,6 +294,7 @@
 
     <footer></footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous'></script>
 </body>
 
