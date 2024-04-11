@@ -12,7 +12,13 @@ body {
     font-weight: 400;
 	line-height: 150%;
     overflow-x: hidden;
+    color: #212529;
     background: #F8F9FA;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 ol, ul {
@@ -89,6 +95,7 @@ main div.sidebar .menu {
     margin: 32px 0;
 }
 
+main div.sidebar .menu li a,
 main div.sidebar .menu li {
     display: flex;
     align-items: center;
