@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => { 
+    const isEmpty = str => !str.trim().length;
     const form = document.getElementById('clientRegister');
 
     form.addEventListener('submit', async (event) => {
@@ -12,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const address = document.getElementById('clientAddress').value;
         const password = document.getElementById('clientPassword').value;
         const confirmPassword = document.getElementById('clientPasswordConfirm').value;
+
+        if(isEmpty(first_name) || isEmpty(last_name) || isEmpty(cpf) || isEmpty(phone) || isEmpty(email) || isEmpty(address) || isEmpty(password) || isEmpty(confirmPassword)) {
+            alert('Preencha todos os campos para cadastrar.');
+            return;
+        }
 
         try {
             await axios.post('http://localhost:8000/client', { 
