@@ -1,3 +1,13 @@
+function deleteUser(client_id) {
+    try {
+        axios.delete('http://localhost:8000/client/'+client_id);
+    } catch (error) { 
+        console.error('Erro ao excluir cliente:', error);
+        document.getElementById('span-error').innerHTML = 'Erro ao excluir cliente. Tente novamente mais tarde.';
+    }
+    
+}
+
 document.addEventListener('DOMContentLoaded', () => { 
     const table = document.getElementById('clientList');
     const clientsList = table.querySelector('tbody');
@@ -18,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <td>${client.phone}</td>
                         <td>
                             <a href='' class='text-primary'><i class='fa fa-fw fa-edit'></i> Editar</a> | 
-                            <a href='' class='text-danger'><i class='fa fa-fw fa-trash'></i> Apagar</a>
+                            <a href='' onclick='deleteUser(`+client.id+`)' class='text-danger'><i class='fa fa-fw fa-trash'></i> Apagar</a>
                         </td>
                     `;
 
@@ -28,11 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
         } catch (error) { 
             console.error('Erro ao carregar clientes:', error);
-            alert('Erro ao carregar clientes. Tente novamente mais tarde.');
-
-            //spam.document.getElementById('client-list').innerHTML = 'Erro ao carregar clientes. Tente novamente mais tarde.';
+            document.getElementById('span-error').innerHTML = 'Erro ao carregar clientes. Tente novamente mais tarde.';
         }
     }
+
 
     loadClients();
 });
