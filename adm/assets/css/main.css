@@ -21,6 +21,11 @@ a {
     color: inherit;
 }
 
+span.text-danger {
+    text-decoration: none;
+    color: inherit;
+}
+
 ol, ul {
 	list-style: none;
     margin: 0;
@@ -220,4 +225,8 @@ main div.register form > .buttons {
     display: flex;
     justify-content: flex-end;
     gap: 0 12px;
+}
+
+.span-error {
+    color: var(--bs-danger);
 }
