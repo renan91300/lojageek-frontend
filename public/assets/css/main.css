@@ -1,0 +1,10 @@
+span.error {
+    font-size: 12px;
+    color: red;
+}
+
+span.success {
+    font-size: 14px;
+    font-weight: 500;
+    color: green;
+}

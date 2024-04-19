@@ -1,10 +1,42 @@
+function isEmpty(str) {
+    return !str.trim().length;
+}
+
+function clearErrors(fields) {
+    fields.forEach(field => {
+        const error = field.querySelector('.error');
+
+        error.innerHTML = ''
+    });
+}
+
+function clearFields(fields) {
+    fields.forEach(field => {
+        const input = field.querySelector('input');
+
+        input.value = '';
+    });
+}
+
+function clearResults(success, error) {
+    success.innerHTML = '';
+    error.innerHTML = '';
+}
+
 document.addEventListener('DOMContentLoaded', () => { 
-    const isEmpty = str => !str.trim().length;
     const form = document.getElementById('clientRegister');
+
+    const form_success = document.querySelector('form .results .success');
+    const form_error = document.querySelector('form .results .error');
+
+    const fields = document.querySelectorAll('form .field');
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
- 
+
+        clearErrors(fields);
+        clearResults(form_success, form_error);
+
         const first_name = document.getElementById('clientFirstName').value; 
         const last_name = document.getElementById('clientLastName').value;
         const cpf = document.getElementById('clientCPF').value;
@@ -14,10 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('clientPassword').value;
         const confirmPassword = document.getElementById('clientPasswordConfirm').value;
 
-        if(isEmpty(first_name) || isEmpty(last_name) || isEmpty(cpf) || isEmpty(phone) || isEmpty(email) || isEmpty(address) || isEmpty(password) || isEmpty(confirmPassword)) {
-            alert('Preencha todos os campos para cadastrar.');
-            return;
-        }
+        let has_error = false;
+
+        fields.forEach(field => {
+            const input = field.querySelector('input');
+            const error = field.querySelector('.error');
+
+            if(isEmpty(input.value)) {
+                has_error = true;
+                error.innerHTML = 'Esse campo não pode estar vazio.</br>';
+            }
+        });
+
+        if(has_error) return;
 
         try {
             await axios.post('http://localhost:8000/client', { 
@@ -31,17 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 confirmPassword
             });
 
-            alert('Cliente cadastrado com sucesso.');
-
-            //spam.document.getElementById('registerSuccess').innerHTML = 'Cliente cadastrado com sucesso.';
+            clearFields(fields);
+            form_success.innerHTML = 'Cliente cadastrado com sucesso.';
 
         } catch (error) {
             console.error('Erro ao cadastrar cliente:', error);
 
-            alert('Erro ao cadastrar cliente, por favor, verifique os dados e tente novamente!');
-
-            //spam.document.getElementById('registerError').innerHTML = 'Erro ao cadastrar cliente, por favor, verifique os dados e tente novamente!';
-
+            form_error.innerHTML = 'Erro ao cadastrar cliente, por favor, verifique os dados e tente novamente!';
         }
     });
 
